@@ -1,0 +1,39 @@
+<table>
+  <tbody>
+    <tr>
+      <th><%= l(:label_auto_create_users) %></th>
+      <td>
+        <%= check_box_tag 'settings[auth_auto_create]', true, @settings['auth_auto_create'] %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:label_strip_domain) %></th>
+      <td>
+        <%= check_box_tag 'settings[strip_domain]', true, @settings['strip_domain'] %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:label_domain_name) %></th>
+      <td>
+        <%= text_field_tag 'settings[domain_name]', @settings['domain_name'] %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:label_ldap_auth_source) %></th>
+      <td>
+        <%= select_tag 'settings[auth_source_ldap_id]',
+                      options_from_collection_for_select(AuthSource.where(type: 'AuthSourceLdap'),
+                                                      :id, :name, @settings['auth_source_ldap_id']) %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:label_default_group) %></th>
+      <td>
+        <%= select_tag 'settings[default_group_id]',
+                      options_from_collection_for_select(Group.all, :id, :name,
+                                                      @settings['default_group_id']),
+                      include_blank: true %>
+      </td>
+    </tr>
+  </tbody>
+</table>

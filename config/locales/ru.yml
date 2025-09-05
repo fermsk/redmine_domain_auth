@@ -1,0 +1,13 @@
+ru:
+  label_auto_create_users: "Автоматически создавать пользователей"
+  label_ldap_auth_source: "Источник аутентификации LDAP"
+  label_default_group: "Группа по умолчанию"
+  label_domain_auth_settings: "Настройки доменной аутентификации"
+  notice_domain_auth_success: "Успешная аутентификация через домен"
+  notice_domain_auth_failed: "Ошибка доменной аутентификации"
+  notice_user_created: "Доменный пользователь успешно создан"
+  error_user_creation_failed: "Ошибка создания доменного пользователя"
+  label_domain_name: "Имя домена"
+  label_strip_domain: "Удалять домен из имени пользователя"
+  label_auth_settings: "Настройки аутентификации"
+  text_domain_auth_info: "Настройте параметры доменной аутентификации здесь"
